@@ -2,14 +2,15 @@ function displayIntroPage() {
   d3.select('.middle')
     .append('h1').text('Introduction')
 
-  const text = 
-    'Survivor is an American reality competition show\n' +
-    'Hi'
+  const text = "Survivor is an American reality competition show where contestants are forced to survive in an isolated location and compete in different challenges. They have an opportunity to win a huge prize or get voted out. Since its debut in 2000, the show has been massively popular. It was one of the first popular reality TV shows in the US, nominated for many awards, and listed as one of the best TV shows of all time. Many contestants have attempted to survive and win. As such, there is a lot of diversity in its cast. In this visualization, I hope to show how diverse the contestants have been throughout the show (from season 1 to season 43)."
 
   d3.select('.middle')
     .append('div')
+    .attr('class', 'text-box')
+
+  d3.select('.text-box')
     .append('text')
-    .text(text)
+      .text(text)
 }
 
 function displayHomestateChartPage() {
@@ -77,6 +78,23 @@ function displayHomestateChartPage() {
             .style("stroke-width", "1px")
         })
   })
+
+  const annotations = [
+    {
+      note: {
+        label: '* map does not include contestants from outside the US',
+        wrap: 400,
+        align: 'center'
+      },
+      x: 0,
+      y: 400,
+    },
+  ]
+
+  d3.select("svg")
+    .append("g")
+    .call(d3.annotation().annotations(annotations))
+    .style("font-size", '12px')
 }
 
 async function displayAgeChartPage() {
