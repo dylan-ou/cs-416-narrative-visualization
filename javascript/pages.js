@@ -355,7 +355,7 @@ function displayRaceChartPage() {
       {
         note: {
           title: "African American Contestants",
-          label: `There have been ${raceCounts[1][1]} white contestants`,
+          label: `There have been ${raceCounts[1][1]} African American contestants`,
           padding: 10,
           wrap: 150
         },
@@ -367,7 +367,7 @@ function displayRaceChartPage() {
       {
         note: {
           title: "Asian American Contestants",
-          label: `There have been ${raceCounts[2][1]} white contestants`,
+          label: `There have been ${raceCounts[2][1]} Asian American contestants`,
           padding: -5,
           wrap: 150
         },
@@ -379,7 +379,7 @@ function displayRaceChartPage() {
       {
         note: {
           title: "Latin American Contestants",
-          label: `There have been ${raceCounts[3][1]} white contestants`,
+          label: `There have been ${raceCounts[3][1]} Latin American contestants`,
           padding: -5,
           wrap: 150
         },
