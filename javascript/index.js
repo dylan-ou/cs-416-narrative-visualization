@@ -1,5 +1,5 @@
 let contestants = 'data/cleaned_contestant_table.csv'
-let toggle, list_of_contestants
+let toggle, list_of_contestants, triggers
 let currentPage
 let numPages
 
@@ -8,6 +8,15 @@ async function init() {
   numPages = 6
   toggle = false
   list_of_contestants = await d3.csv(contestants)
+  triggers = {
+    season: 0,
+    homestate: null,
+    age: null,
+    gender: null,
+    race: null,
+    orientation: null,
+    winner: false
+  }
   
   clearDisplay()
   showButtons()

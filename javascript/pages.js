@@ -30,7 +30,7 @@ function displayHomestateChartPage() {
   const cdomain = [0,75];
   const cs = d3.scaleLinear().domain(cdomain).range(crange);
 
-  var Tooltip = d3.select(".middle")
+  let Tooltip = d3.select(".middle")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -57,7 +57,7 @@ function displayHomestateChartPage() {
         .style('stroke', 'black')
         .style('stroke-width', '1px')
         .style('fill', function (d,i) {
-          console.log(d.properties.name)
+          
           return cs(stateCounts.get(d.properties.name))
         })
         .on('mouseover', function(d) {
@@ -66,7 +66,7 @@ function displayHomestateChartPage() {
             .style("stroke-width", "3px")
         })
         .on('mousemove', function(d,i) {
-          console.log(d3.pointer(d))
+          
           Tooltip
             .html(`${i.properties.name}<br>Num. Contestants: ${(stateCounts.get(i.properties.name) ? stateCounts.get(i.properties.name) : 0)}`)
             .style("left", (d3.pointer(d)[0] + 350) + "px")
@@ -311,7 +311,7 @@ function displayRaceChartPage() {
 
   raceCounts = d3.sort(raceCounts, function (d) { return -d[1]})
 
-  console.log(raceCounts)
+  
 
   let races = raceCounts.map((x) => {return x[0]})
   let counts = raceCounts.map((x) => {return x[1]})
@@ -408,7 +408,7 @@ function displayOrientationChartPage() {
 
   orientationCounts = d3.sort(orientationCounts, function (d) { return -d[1]})
 
-  console.log(orientationCounts)
+  
 
   let orientations = orientationCounts.map((x) => {return x[0]})
   let counts = orientationCounts.map((x) => {return x[1]})
