@@ -1,0 +1,47 @@
+html {
+  font-family:'Arial'
+}
+
+.header {
+  text-align: center;
+}
+
+.col {
+  float: left;
+  text-align: center;
+  height: 80vh;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left {
+  float: left;
+  width: 5%;
+}
+
+.right {
+  float: right;
+  width: 5%;
+}
+
+.middle {
+  width: 90%;
+  text-align: center;
+}
+
+.scene-button {
+  width: 5vh;
+  height: 60vh;
+  margin: 10vh 2px;
+  background-color: #27ae60;
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 50px;
+}

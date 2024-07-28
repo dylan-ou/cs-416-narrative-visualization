@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>An Analysis of Survivor Contestants</title>
+    <script src='https://cdn.jsdelivr.net/npm/d3@7'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js'></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src='./javascript/index.js'></script>
+    <script src='./javascript/pages.js'></script>
+    <script src='./javascript/exploration-page.js'></script>
+    <link rel='stylesheet' href='./css/style.css'></link>
+  </head>
+  
+  <body onload='init()'>
+    <div class="header">
+      <h1 style="text-align: center;">An Analysis of Survivor Contestants</h1>
+      <p>An analysis of the demographics of contestants on American reality competition show "Survivor" from Season 1 to Season 43</p>
+      <a href="https://www.kaggle.com/datasets/justinveiner/survivor-cbs-dataset">Original Dataset</a> | <a href="">Cleaned Dataset + Repo</a>
+    </div>
+
+    <div class="row">
+      <div class="col left">
+        <button class="scene-button prev-button" type="button" onclick="prevPage()"><</button>
+      </div>
+      <div class="col middle"></div>
+      <div class="col right">
+        <button class="scene-button next-button"type="button" onclick="nextPage()">></button>
+      </div>
+    </div>
+    
+  </body>
+</html>
